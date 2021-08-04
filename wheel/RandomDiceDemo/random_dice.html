@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            min-height: 100vh;
+        }
+        .dice{
+            background-image: url(https://assets.codepen.io/2002878/random-dice.png);
+            width: 366px;
+            height: 366px;
+            background-position: 0% 100%;
+            /* The animation set */
+            animation: .2s steps(5,start) random infinite;
+        }
+        /* It use @keyframes name to define a animation */
+        @keyframes random {
+            from {
+                background-position: 0% 100%;
+            }
+            to {
+                background-position: 100% 100%;
+            }
+        }
+
+        #dice {
+            display: none;
+        }
+
+        #dice:checked + label .dice{
+            animation-play-state: paused;
+        }
+
+        .dice::before{
+            content: '?';
+            /* ? */
+            background-color: rgba(255,255,255,.8);
+            height: inherit;
+            width: inherit;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 320px;
+            font-family: Arial, Helvetica, sans-serif;
+            /* ? */
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: 60px;
+        }
+
+        #dice:checked + label .dice::before {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <input type="checkbox" id="dice">
+    <label for="dice">
+        <div class="dice"></div>
+    </label>
+</body>
+</html>
