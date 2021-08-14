@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    
+}
+
+html {
+    font-size: 14px;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.channel{
+    position: absolute;
+    width: 80%;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-200px);
+    font-size: 30px;
+    font-weight: bold;
+    color: #fff;
+}
+
+nav {
+    position: relative;
+    width: 500px;
+    height: 50px;
+    background-color: rgb(76, 121, 180) ;
+    border-radius: 10px;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+}
+
+nav a{
+    position: relative;
+    display: block;
+    float: left;
+    font-size: 15px;
+    line-height: 50px;
+    width: 100px;
+    height: 50px;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    z-index: 10;
+}
+
+nav a:nth-child(1){
+    width: 100px;
+}
+nav a:nth-child(2){
+    width: 125px;
+}
+nav a:nth-child(3){
+    width: 50px;
+}
+nav a:nth-child(4){ 
+    width: 125px;
+}
+nav a:nth-child(5){
+    width: 100px;
+}
+
+nav .animation{
+    position: absolute;
+    height: 100%;
+    background-color:rgb(89, 95, 104);
+    z-index: 9;
+    border-radius: 10px;
+}
+.start-home,
+nav a:nth-child(1):hover~.animation{
+    width: 100px;
+    left: 0px;
+}
+nav a:nth-child(2):hover~.animation{
+    width: 125px;
+    left: 100px;
+}
+nav a:nth-child(3):hover~.animation{
+    width: 50px;
+    left: 225px;
+}
+nav a:nth-child(4):hover~.animation{ 
+    width: 125px;
+    left: 275px
+}
+nav a:nth-child(5):hover~.animation{
+    width: 100px;
+    left: 400px;
+}
