@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #d3dafa;
+        }
+
+        .shell {
+            position: fixed;
+            width: 280px;
+            height: 650px;
+            background-color: #8a98c9;
+        }
+
+        .buttons {
+            margin: 60px 0;
+            color: #fff;
+        }
+
+        .li {
+            letter-spacing: 2px;
+            font: 600 17px '';
+            padding: 16px 52px;
+            transition: .3s;
+        }
+
+        .li:after {
+            content: '';
+            position: absolute;
+            left: 20px;
+            margin-top: -22px;
+            display: block;
+            width: 20px;
+            height: 20px;
+            background-color: #fff;
+            border-radius: 50%;
+        }
+
+        .buttons>li:hover {
+            background-color: #beb5df;
+        }
+
+        .li ul {
+            width: 0;
+            height: 530px;
+            padding: 60px 0;
+            position: absolute;
+            top: 0;
+            right: 0;
+            overflow: hidden;
+            background-color: #59699b;
+            transition: .3s;
+        }
+
+        .li ul li {
+            padding: 16px 24px;
+            transition: .3s;
+        }
+
+        .li:hover ul {
+            width: 230px;
+            
+        }
+
+        .li ul li hover {
+            background-color: #828eb9;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="shell">
+        <ul class="buttons">
+            <li class="li">
+                1
+                <ul>
+                    <li>1.1</li>
+                    <li>1.2</li>
+                    <li>1.3</li>
+                    <li>1.4</li>
+                </ul>
+            </li>
+            <li class="li">
+                2
+                <ul>
+                    <li>2.1</li>
+                    <li>2.2</li>
+                    <li>2.3</li>
+                    <li>2.4</li>
+                </ul>
+            </li>
+            <li class="li">
+                3
+                <ul>
+                    <li>3.1</li>
+                    <li>3.2</li>
+                    <li>3.3</li>
+                    <li>3.4</li>
+                </ul>
+            </li>
+            <li class="li">
+                4
+                <ul>
+                    <li>4.1</li>
+                    <li>4.2</li>
+                    <li>4.3</li>
+                    <li>4.4</li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</body>
+
+</html>

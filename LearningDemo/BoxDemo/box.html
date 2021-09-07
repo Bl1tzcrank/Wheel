@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        body {
+            background-color: #f5f5f5;
+        }
+        .box {
+            position: relative;
+            background-color: #fff;
+            width: 298px;
+            height: 415px;
+            margin: 100px auto;
+        }
+        .box>img {
+            width: 100%;
+        }
+        .review {
+            height: 70px;
+            font-size: 14px;
+            padding: 0 30px;
+            /* The p box has a height, if we give it the top padding, it will make the box bigger */
+            margin: 30px 0;
+        }
+        .appraise {
+            font-size: 12px;
+            color: #b0b0b0;
+            padding: 0 20px;
+        }
+        .info {
+            font-size: 14px;
+            margin-top: 15px;
+            padding: 0 28px;
+        }
+        .info h4 {
+            display: inline-block;
+            font-weight: 400;
+        }
+        .info span {
+            color:#ff6700;
+        }
+        .info em {
+            font-style: normal;
+            color: #b0b0b0;
+            margin: 0 6px 0 15px;
+        }
+        .info h4 a {
+            text-decoration: none;
+            color: black;
+        }
+        .tag {
+            position: absolute;
+            height: 80px;
+            left:-24px;
+            top:-24px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div  class="box">
+            <em>
+                <img class="tag" src="./images/tag.jpg" alt="">
+            </em>
+            <img src="./images/img-1.jpg" alt="">
+            <p class="review">Here is the introduction of my Tomimi.She is SOOOOOOOOOOO GOOOOOOOOOOOOOOOD</p>
+            <div class="appraise">From 114514 's appraise </div>
+            <div class="info">
+                <h4>
+                    <a href="./images/img.jpg">Tomimi's Photogarph</a>
+                </h4>
+                <em>
+                    |
+                </em>
+                <span>
+                    114514$        
+                </span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
