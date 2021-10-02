@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var oldstr = 'abcoefoxyozzopp';
+        function searchSame(str){
+            var time = 0;
+            var index = str.indexOf('o')
+            while (index !== -1) {
+                console.log(index);
+                time += 1;
+                index = str.indexOf('o',index + 1)
+            }
+        }
+        searchSame(oldstr);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

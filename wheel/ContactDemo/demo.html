@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./iconfont/iconfont.css">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        
+        body {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: pink;
+        }
+
+        .shell {
+            height: 100px;
+            width: 550px;
+            display: flex;
+            border: solid 2px black;
+            /*make the iconfont have the same space*/
+            justify-content: space-evenly;
+            position: relative;
+        }
+
+        .box {
+            width: 25%;
+            height: 100%;
+            text-align: center;
+        }
+
+        .box i {
+            display: block;
+            font-size: 50px;
+            /*set the line-height equal the box height, to center
+            the text or iconfont*/
+            line-height: 100px;
+            /*set the iconfont color's transition when your cursor
+            hover on it */
+            transition: .5s;
+        }
+
+        .box i:hover {
+            color: azure;
+        }
+
+        .shell::after {
+            content: 'Contact Me';
+            font-size: 21px;
+            position: absolute;
+            right: 0px;
+            top: -35px;
+            color: white;
+        }
+
+        .shell::before {
+            content: '';
+            position: absolute;
+            width: 77%;
+            height: 5px;
+            display: block;
+            left: 0;
+            top: -21px;
+            background-color: #fff;
+        }
+
+        .box i::after {
+            content: attr(data-i);
+            position: absolute;
+            bottom: 140px;
+            width: 100%;
+            display: block;
+            left: 0;
+            font-size: 30px;
+            color: pink;
+            background-color: #fff;
+            /*make the element transparent, make it disapper*/
+            opacity: 0;
+            transform: translateY(5px);
+            transition: .3s .2s;
+        }
+
+        .box i:hover::after {
+            opacity: 1;
+            transform: translateY(0px);
+        }
+    </style>
+</head>
+<body>
+    <div class="shell">
+        <div class="box">
+            <i class="iconfont icon-qq" data-i="QQ:824272719"></i>
+        </div>
+        <div class="box">
+            <i class="iconfont icon-weixin" data-i="WX:x824272719"></i>
+        </div>
+        <div class="box">
+            <i class="iconfont icon-bilibili-line" data-i="BILI:SHICHA"></i>
+        </div>
+        <div class="box">
+            <i class="iconfont icon-tao" data-i="TAOBAO:NOPE"></i>
+        </div>
+    </div>
+</body>
+</html>
